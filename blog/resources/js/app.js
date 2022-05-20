@@ -14,6 +14,7 @@ import * as VueRouter from 'vue-router';
 import * as VueAxios from 'vue-axios';
 
 import axios from 'axios';
+//window.axios = require('axios');
 import {routes} from './routes';
 //import {h} from 'vue';
 
@@ -38,12 +39,13 @@ const router = new VueRouter.createRouter({
 
 app.use(router)
 app.use(VueAxios, axios);
+//app.prototype.$axios = axios
 
 app.mount('#app')
  
-new Vue({
-    router,
-    }).$mount('#app')
+// new Vue({
+//     router,
+//     }).$mount('#app')
 
 // const app = new Vue({
 //     el: '#app',

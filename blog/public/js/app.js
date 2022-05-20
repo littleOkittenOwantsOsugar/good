@@ -20298,6 +20298,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); //import 
 
 
 
+ //window.axios = require('axios');
 
  //import {h} from 'vue';
 
@@ -20315,11 +20316,12 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_6__.createRouter({
   routes: _routes__WEBPACK_IMPORTED_MODULE_5__.routes
 });
 app.use(router);
-app.use(vue_axios__WEBPACK_IMPORTED_MODULE_3__, (axios__WEBPACK_IMPORTED_MODULE_4___default()));
-app.mount('#app');
-new Vue({
-  router: router
-}).$mount('#app'); // const app = new Vue({
+app.use(vue_axios__WEBPACK_IMPORTED_MODULE_3__, (axios__WEBPACK_IMPORTED_MODULE_4___default())); //app.prototype.$axios = axios
+
+app.mount('#app'); // new Vue({
+//     router,
+//     }).$mount('#app')
+// const app = new Vue({
 //     el: '#app',
 //     router: router,
 //     render: h => h(App),
