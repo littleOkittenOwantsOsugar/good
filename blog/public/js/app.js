@@ -20306,14 +20306,20 @@ app.provide("moment", (moment__WEBPACK_IMPORTED_MODULE_2___default())); // const
 //     router,
 //     render: h => h(App),
 // }).$mount('#app');
+//app.use(VueRouter);
+// app.use(VueAxios, axios);
+//app.mount("#app");
 
-app.use(vue_router__WEBPACK_IMPORTED_MODULE_6__);
-app.use(vue_axios__WEBPACK_IMPORTED_MODULE_3__, (axios__WEBPACK_IMPORTED_MODULE_4___default()));
-app.mount("#app");
-var router = new vue_router__WEBPACK_IMPORTED_MODULE_6__({
-  mode: 'history',
+var router = new vue_router__WEBPACK_IMPORTED_MODULE_6__.createRouter({
+  history: vue_router__WEBPACK_IMPORTED_MODULE_6__.createWebHashHistory(),
   routes: _routes__WEBPACK_IMPORTED_MODULE_5__.routes
-}); // const app = new Vue({
+});
+app.use(router);
+app.use(vue_axios__WEBPACK_IMPORTED_MODULE_3__, (axios__WEBPACK_IMPORTED_MODULE_4___default()));
+app.mount('#app');
+new Vue({
+  router: router
+}).$mount('#app'); // const app = new Vue({
 //     el: '#app',
 //     router: router,
 //     render: h => h(App),

@@ -26,16 +26,25 @@ app.provide("moment", moment);
 //     render: h => h(App),
 // }).$mount('#app');
  
-app.use(VueRouter);
-app.use(VueAxios, axios);
+//app.use(VueRouter);
+// app.use(VueAxios, axios);
 
-app.mount("#app");
+//app.mount("#app");
  
-const router = new VueRouter({
-    mode: 'history',
+const router = new VueRouter.createRouter({
+    history: VueRouter.createWebHashHistory(),
     routes: routes
 });
+
+app.use(router)
+app.use(VueAxios, axios);
+
+app.mount('#app')
  
+new Vue({
+    router,
+    }).$mount('#app')
+
 // const app = new Vue({
 //     el: '#app',
 //     router: router,
