@@ -20287,45 +20287,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./routes */ "./resources/js/routes.js");
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); //import Vue from 'vue/dist/vue';
-
-
- //import App from "./App.vue"
-//import * as Vue from 'vue';
-//window.Vue = require('vue');
+__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 
 
 
- //window.axios = require('axios');
 
- //import {h} from 'vue';
+
 
 var app = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createApp)(_App_vue__WEBPACK_IMPORTED_MODULE_1__["default"]);
-app.provide("moment", (moment__WEBPACK_IMPORTED_MODULE_2___default())); // const app=new Vue({
-//     router,
-//     render: h => h(App),
-// }).$mount('#app');
-//app.use(VueRouter);
-// app.use(VueAxios, axios);
-//app.mount("#app");
-
+app.provide("moment", (moment__WEBPACK_IMPORTED_MODULE_2___default()));
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_6__.createRouter({
   history: vue_router__WEBPACK_IMPORTED_MODULE_6__.createWebHashHistory(),
   routes: _routes__WEBPACK_IMPORTED_MODULE_5__.routes
 });
 app.use(router);
-app.use(vue_axios__WEBPACK_IMPORTED_MODULE_3__, (axios__WEBPACK_IMPORTED_MODULE_4___default())); //app.prototype.$axios = axios
-
-app.mount('#app'); // new Vue({
-//     router,
-//     }).$mount('#app')
-// const app = new Vue({
-//     el: '#app',
-//     router: router,
-//     render: h => h(App),
-// });
+app.use(vue_axios__WEBPACK_IMPORTED_MODULE_3__, (axios__WEBPACK_IMPORTED_MODULE_4___default()));
+app.mount('#app');
 
 /***/ }),
 
